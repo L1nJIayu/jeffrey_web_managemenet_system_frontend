@@ -1,0 +1,32 @@
+.theHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background-color: #001529;
+  height: 100%;
+  min-height: 54px;
+  .theHeader__title {
+    color: #FFF;
+  }
+  .theHeader__right {
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    .userName {
+      padding: 0 8px;
+      user-select: none;
+    }
+    .action_item {
+      width: 54px;
+      height: 54px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(255, 255, 255, .2);
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+
+$header_height: 54px;
+$breadcrumb_height: 32px;
+
+.header {
+  height: $header_height;
+}
+
+.layout {
+  display: flex;
+  height: calc(100vh - $header_height);
+  
+  .menu {
+    border-right: 1px solid #f0f0f0;
+    width: 220px;
+    height: 100%;
+  }
+  .content {
+    background-color: #f5f5f5;
+    flex: auto;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-flow: column nowrap;
+    .breadcrumb {
+      height: $breadcrumb_height;
+      padding: 8px 12px 0;
+    }
+    .content__box {
+      overflow: auto;
+      height: calc(100% - $breadcrumb_height);
+      background-color: #FFF;
+      margin: 12px;
+      margin-top: 0;
+    }
+  }
+}
+
+

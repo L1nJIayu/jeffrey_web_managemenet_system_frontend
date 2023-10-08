@@ -1,0 +1,19 @@
+
+@font-face {
+  font-family: 'PingFang SC'; 
+  src: url('../assets/fonts/PingFang/PingFangMedium.otf');
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  font-family: 'PingFang SC';
+  width: 100vw;
+  height: 100vh;
+}

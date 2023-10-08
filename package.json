@@ -1,0 +1,37 @@
+{
+  "name": "jeffrey_web_managemenet_system_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "react-scripts build",
+    "dev": "react-scripts start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.69.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "antd": "^5.9.4",
+    "less": "^4.2.0",
+    "react-router-dom": "^6.16.0"
+  }
+}
