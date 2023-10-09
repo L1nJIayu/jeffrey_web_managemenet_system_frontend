@@ -1,4 +1,4 @@
-
+import type { RouterObject } from 'react-router-dom'
 
 import Login from '../pages/admin/Login'
 import Main from '../pages/admin/Main'
@@ -6,7 +6,7 @@ import Home from '../pages/admin/Home'
 import UserTable from '../pages/user/UserTable'
 
 
-export const default_routes = [
+export const default_routes: RouterObject[] = [
   {
     path: '/',
     element: <Login />
@@ -20,7 +20,7 @@ export const default_routes = [
     element: <Main />,
     children: [
       {
-        path: 'home',
+        path: '/main/home/:id',
         element: <Home />
       },
       {
