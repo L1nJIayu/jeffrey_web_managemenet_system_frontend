@@ -1,23 +1,65 @@
-import { Link, useNavigate } from 'react-router-dom'
 
-import { Button } from 'antd'
+import React from 'react';
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import { Button, Checkbox, Form, Input } from 'antd';
 
-const Login = () => {
+import './Login.scss'
 
-  const navigate = useNavigate()
-
-  const login = () => {
-    navigate('/main')
-  }
+const App: React.FC = () => {
+  const onFinish = (values: any) => {
+    console.log('Received values of form: ', values);
+  };
 
   return (
-    <div>
-      <Button type="primary" onClick={login}>登录</Button>
+    <div className="loginPage">
+      <div className="loginPage__form">
+        <div class="title">后台管理系统</div>
+        <div className="loginPage__form__box">
+          <Form
+            name="normal_login"
+            className="login-form"
+            initialValues={{ remember: true }}
+            onFinish={onFinish}
+          >
+            <Form.Item
+              name="username"
+              rules={[{ required: true, message: 'Please input your Username!' }]}
+            >
+              <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+            </Form.Item>
+            <Form.Item
+              name="password"
+              rules={[{ required: true, message: 'Please input your Password!' }]}
+            >
+              <Input
+                prefix={<LockOutlined className="site-form-item-icon" />}
+                type="password"
+                placeholder="Password"
+              />
+            </Form.Item>
+            <Form.Item>
+              <Form.Item name="remember" valuePropName="checked" noStyle>
+                <Checkbox>Remember me</Checkbox>
+              </Form.Item>
+
+              <a className="login-form-forgot" href="">
+                Forgot password
+              </a>
+            </Form.Item>
+
+            <Form.Item>
+              <Button type="primary" htmlType="submit" className="login-form-button">
+                Log in
+              </Button>
+              Or <a href="">register now!</a>
+            </Form.Item>
+          </Form>
+        </div>
+
+      </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default Login
-
-
+export default App;

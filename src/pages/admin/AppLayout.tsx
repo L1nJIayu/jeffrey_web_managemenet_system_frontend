@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom'
 
-import './Main.scss'
+import './AppLayout.scss'
 
 import Breadcrumb from '../../components/Breadcrumb'
 import TheHeader from '../../components/TheHeader'
-import Menu from '../../components/Menu'
+import TheMenu from '../../components/TheMenu'
 
-const Main = () => {
+const AppLayout = () => {
   return (
     <>
       <div className="header">
@@ -15,7 +15,7 @@ const Main = () => {
 
       <div className="layout">
         <div className="menu">
-          <Menu />
+          <TheMenu />
         </div>
         <div className="content">
           <div className="breadcrumb">
@@ -30,4 +30,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default AppLayout

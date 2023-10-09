@@ -1,0 +1,23 @@
+.loginPage {
+  background-color: #2b373d;
+  height: 100%;
+  .loginPage__form {
+    width: 360px;
+    position: absolute;
+    right: 60px;
+    top: 25%;
+    
+    .title {
+      color: #FFF;
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 2px;
+      padding: 8px;
+    }
+    .loginPage__form__box {
+      padding: 48px 32px 24px;
+      box-sizing: border-box;
+      border: 1px solid rgba(211, 227, 253, .5);
+    }
+  }
+}
