@@ -11,3 +11,4 @@ export function getUserTableApi(params: {
 }) {
   return axios.get('/user/list', params)
 }
+
